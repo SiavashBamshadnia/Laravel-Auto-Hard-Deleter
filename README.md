@@ -16,18 +16,18 @@ composer require sbamtr/laravel-auto-hard-deleter
 ```
 ### Step 2
 #### For Laravel
-The service provider will automatically get registered. Or you may manually add the service provider in your config/app.php file:
+The service provider will automatically get registered. Or you may manually add the service provider in your `config/app.php` file:
 ```php
 'providers' => [
     // ...
-    \sbamtr\AutoHardDeleter\AutoHardDeleteServiceProvider::class,
+    \sbamtr\LaravelAutoHardDeleter\AutoHardDeleteServiceProvider::class,
 ];
 ```
 
 #### For Lumen
 Add this line of code under the `Register Service Providers` section of your `bootstrap/app.php`:
 ```php
-$app->register(\sbamtr\AutoHardDeleter\AutoHardDeleteServiceProvider::class);
+$app->register(\sbamtr\LaravelAutoHardDeleter\AutoHardDeleteServiceProvider::class);
 ```
 
 ### Step 3
@@ -37,7 +37,7 @@ in you `app/Console/Kernel.php` file, paste this code in `schedule()` function:
 protected function schedule(Schedule $schedule)
 {
     // ...
-    $schedule->command(\sbamtr\AutoHardDeleter\HardDeleteExpiredCommand::class)->hourly();
+    $schedule->command(\sbamtr\LaravelAutoHardDeleter\HardDeleteExpiredCommand::class)->hourly();
     // ...
 }
 ```
@@ -46,7 +46,7 @@ In the code above, the command scheduled to run hourly. you can change it. For m
 ### Step 4 (Optional)
 You can publish the config file with this following command:
 ```bash
-php artisan vendor:publish --provider="sbamtr\AutoHardDeleter\AutoHardDeleteServiceProvider" --tag=config
+php artisan vendor:publish --provider="sbamtr\LaravelAutoHardDeleter\AutoHardDeleteServiceProvider" --tag=config
 ```
 
 ## Usage

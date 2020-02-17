@@ -66,7 +66,7 @@ class HardDeleteExpiredCommand extends Command
             $deletedAtColumn = $object->getDeletedAtColumn();
 
             // If auto hard delete is not enabled, do not delete anything
-            if (!defined("$class::AUTO_HARD_DELETE_ENABLED"))
+            if (!defined("$class::AUTO_HARD_DELETE_ENABLED") || $class::AUTO_HARD_DELETE_ENABLED != true)
                 continue;
 
             if (defined("$class::AUTO_HARD_DELETE_AFTER"))
