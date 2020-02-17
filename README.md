@@ -48,6 +48,15 @@ You can publish the config file with this following command:
 ```bash
 php artisan vendor:publish --provider="sbamtr\LaravelAutoHardDeleter\AutoHardDeleteServiceProvider" --tag=config
 ```
+**Note:** If you are using Lumen, you have to use [this package](https://github.com/laravelista/lumen-vendor-publish).
+
+Also you can set the `AUTO_HARD_DELETE_AFTER` value in `.env` file. like the following code:
+
+```.env
+...
+AUTO_HARD_DELETE_AFTER='1 day'
+...
+``` 
 
 ## Usage
 in your models that used `SoftDeletes` trait, you can enable Auto Hard Delete with this line:
