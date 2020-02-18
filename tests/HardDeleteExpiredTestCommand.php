@@ -8,7 +8,7 @@
  * @link        https://github.com/SiavashBamshadnia/Laravel-Auto-Hard-Deleter
  */
 
-namespace sbamtr\LaravelAutoHardDeleter;
+namespace sbamtr\LaravelAutoHardDeleter\Tests;
 
 use Carbon\Carbon;
 use Illuminate\Console\Command;
@@ -17,7 +17,7 @@ use ReflectionClass;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 use Symfony\Component\Process\Process;
 
-class HardDeleteExpiredCommand extends Command
+class HardDeleteExpiredTestCommand extends Command
 {
     /**
      * The name and signature of the console command.
@@ -57,7 +57,7 @@ class HardDeleteExpiredCommand extends Command
 
         // Exclude classes that not support soft delete
         foreach ($classes as $class) {
-            if (Str::startsWith($class, 'App') && (new ReflectionClass($class))->hasMethod('runSoftDelete')) {
+            if (Str::startsWith($class, 'sbamtr\LaravelAutoHardDeleter\Tests\Models') && (new ReflectionClass($class))->hasMethod('runSoftDelete')) {
                 $classes2[] = $class;
             }
         }
