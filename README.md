@@ -1,9 +1,11 @@
 # Laravel Auto Hard Deleter
 
+[![Build Status](https://travis-ci.org/SiavashBamshadnia/Laravel-Auto-Hard-Deleter.svg?branch=master)](https://travis-ci.org/SiavashBamshadnia/Laravel-Auto-Hard-Deleter)
 [![Build Status](https://scrutinizer-ci.com/g/SiavashBamshadnia/Laravel-Auto-Hard-Deleter/badges/build.png?b=master)](https://scrutinizer-ci.com/g/SiavashBamshadnia/Laravel-Auto-Hard-Deleter/build-status/master)
+[![Latest Stable Version](https://poser.pugx.org/sbamtr/Laravel-Auto-Hard-Deleter/version)](https://packagist.org/packages/sbamtr/laravel-auto-hard-deleter)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/SiavashBamshadnia/Laravel-Auto-Hard-Deleter/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/SiavashBamshadnia/Laravel-Auto-Hard-Deleter/?branch=master)
 [![Code Intelligence Status](https://scrutinizer-ci.com/g/SiavashBamshadnia/Laravel-Auto-Hard-Deleter/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
-[![License: MIT](https://img.shields.io/badge/License-MIT-success.svg)](https://opensource.org/licenses/MIT)
+[![License](https://poser.pugx.org/sbamtr/Laravel-Auto-Hard-Deleter/license)](https://github.com/SiavashBamshadnia/Laravel-Auto-Hard-Deleter)
 
 This package, deletes soft deleted rows automatically after a time interval that you define. 
 
