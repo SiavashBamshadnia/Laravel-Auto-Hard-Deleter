@@ -11,6 +11,7 @@
 namespace sbamtr\LaravelAutoHardDeleter;
 
 use Carbon\Carbon;
+use Exception;
 use Illuminate\Console\Command;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Str;
@@ -38,8 +39,9 @@ class HardDeleteExpiredCommand extends Command
     public function handle()
     {
         // Enable Eloquent in Lumen
-        if (method_exists(app(), 'withEloquent'))
+        if (function_exists('app') && method_exists(app(), 'withEloquent')) {
             app()->withEloquent();
+        }
 
         // Autoload classes. this is needed for finding latest model classes
         $process = new Process(['composer', 'dump-autoload', '-o']);
@@ -50,7 +52,7 @@ class HardDeleteExpiredCommand extends Command
         }
 
         // Include all of classes
-        $classes = include_once base_path('vendor/composer/autoload_classmap.php');
+        $classes = include_once /** @scrutinizer ignore-call */ base_path('vendor/composer/autoload_classmap.php');
         $classes = array_keys($classes);
         $classes2 = [];
 
@@ -66,24 +68,29 @@ class HardDeleteExpiredCommand extends Command
             $deletedAtColumn = $object->getDeletedAtColumn();
 
             // If auto hard delete is not enabled, do not delete anything
-            if (!defined("$class::AUTO_HARD_DELETE_ENABLED") || $class::AUTO_HARD_DELETE_ENABLED != true)
+            if (!defined("$class::AUTO_HARD_DELETE_ENABLED") || $class::AUTO_HARD_DELETE_ENABLED != true) {
                 continue;
+            }
 
-            if (defined("$class::AUTO_HARD_DELETE_AFTER"))
+            if (defined("$class::AUTO_HARD_DELETE_AFTER")) {
                 $autoHardDeleteAfter = $class::AUTO_HARD_DELETE_AFTER;
-            else
+            } else {
                 $autoHardDeleteAfter = null;
+            }
 
-            if (!$autoHardDeleteAfter || blank($autoHardDeleteAfter))
-                $autoHardDeleteAfter = config('auto-hard-deleter.auto_hard_delete_after');
-            if (is_numeric($autoHardDeleteAfter))
+            if (!$autoHardDeleteAfter || blank($autoHardDeleteAfter)) {
+                $autoHardDeleteAfter = /** @scrutinizer ignore-call */ config('auto-hard-deleter.auto_hard_delete_after');
+            }
+            if (is_numeric($autoHardDeleteAfter)) {
                 $autoHardDeleteAfter .= ' days';
+            }
 
             // Hard delete expired rows
             $count = $class::onlyTrashed()->where($deletedAtColumn, '<=', Carbon::now()->sub($autoHardDeleteAfter))->forceDelete();
 
-            if ($count)
+            if ($count) {
                 $this->line("Deleted $count rows from " . $object->getTable() . " table.");
+            }
         }
 
         $this->info('Auto hard deleting completed successfully.');
