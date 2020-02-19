@@ -1,10 +1,11 @@
 <?php
 
 /**
- * Laravel Auto Hard Deleter
+ * Laravel Auto Hard Deleter.
  *
  * @author      Siavash Bamshadnia
  * @license     http://www.opensource.org/licenses/mit-license.php MIT
+ *
  * @link        https://github.com/SiavashBamshadnia/Laravel-Auto-Hard-Deleter
  */
 
@@ -35,7 +36,7 @@ class AutoHardDeleteServiceProvider extends ServiceProvider
     public function boot()
     {
         // Publish config file
-        $configPath = __DIR__ . '/../config/auto-hard-deleter.php';
+        $configPath = __DIR__.'/../config/auto-hard-deleter.php';
         if (function_exists('config_path')) {
             $publishPath = config_path('auto-hard-deleter.php');
         } else {
