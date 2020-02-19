@@ -19,7 +19,7 @@ class AutoHardDeleterTest extends TestCase
         factory(SampleModel::class, $this->faker->numberBetween(1, 100))->create(['del' => Carbon::now()->subDays(15)]);
         factory(SampleModel::class, $this->faker->numberBetween(1, 100))->create(['del' => Carbon::now()->subDays($this->faker->numberBetween(16, 100))]);
 
-        $app = new Application(realpath(__DIR__ . '/../'));
+        $app = new Application(realpath(__DIR__.'/../'));
         $command = $this->app->make(HardDeleteExpiredTestCommand::class);
         $command->setLaravel($app);
         $tester = new CommandTester($command);
@@ -32,16 +32,16 @@ class AutoHardDeleterTest extends TestCase
     {
         $app['config']->set('database.default', 'testbench');
         $app['config']->set('database.connections.testbench', [
-            'driver' => 'sqlite',
+            'driver'   => 'sqlite',
             'database' => ':memory:',
-            'prefix' => '',
+            'prefix'   => '',
         ]);
     }
 
     protected function setUp(): void
     {
         parent::setUp();
-        $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
-        $this->withFactories(__DIR__ . '/database/factories');
+        $this->loadMigrationsFrom(__DIR__.'/database/migrations');
+        $this->withFactories(__DIR__.'/database/factories');
     }
 }

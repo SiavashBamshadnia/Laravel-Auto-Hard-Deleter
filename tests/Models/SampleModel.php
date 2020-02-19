@@ -1,6 +1,5 @@
 <?php
 
-
 namespace sbamtr\LaravelAutoHardDeleter\Tests\Models;
 
 use Illuminate\Database\Eloquent\Model;
