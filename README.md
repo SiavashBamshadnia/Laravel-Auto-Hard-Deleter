@@ -3,6 +3,7 @@
 ![PHP Composer](https://github.com/SiavashBamshadnia/Laravel-Auto-Hard-Deleter/workflows/PHP%20Composer/badge.svg)
 [![Build Status](https://travis-ci.org/SiavashBamshadnia/Laravel-Auto-Hard-Deleter.svg?branch=master)](https://travis-ci.org/SiavashBamshadnia/Laravel-Auto-Hard-Deleter)
 [![Build Status](https://scrutinizer-ci.com/g/SiavashBamshadnia/Laravel-Auto-Hard-Deleter/badges/build.png?b=master)](https://scrutinizer-ci.com/g/SiavashBamshadnia/Laravel-Auto-Hard-Deleter/build-status/master)
+[![StyleCI](https://github.styleci.io/repos/241140247/shield?branch=master)](https://github.styleci.io/repos/241140247)
 [![Latest Stable Version](https://poser.pugx.org/sbamtr/Laravel-Auto-Hard-Deleter/version)](https://packagist.org/packages/sbamtr/laravel-auto-hard-deleter)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/SiavashBamshadnia/Laravel-Auto-Hard-Deleter/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/SiavashBamshadnia/Laravel-Auto-Hard-Deleter/?branch=master)
 [![Code Intelligence Status](https://scrutinizer-ci.com/g/SiavashBamshadnia/Laravel-Auto-Hard-Deleter/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
@@ -100,3 +101,6 @@ Also you can hard delete expired rows manually using this artisan command:
 php artisan hard-delete-expired
 ```
 
+Writen with <span style="color: #e25555;">&hearts;</span> by Siavash Bamshadnia.
+
+Please support me by staring this repository.
