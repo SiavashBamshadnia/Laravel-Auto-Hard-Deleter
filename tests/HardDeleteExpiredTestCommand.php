@@ -1,10 +1,11 @@
 <?php
 
 /**
- * Laravel Auto Hard Deleter
+ * Laravel Auto Hard Deleter.
  *
  * @author      Siavash Bamshadnia
  * @license     http://www.opensource.org/licenses/mit-license.php MIT
+ *
  * @link        https://github.com/SiavashBamshadnia/Laravel-Auto-Hard-Deleter
  */
 
@@ -88,7 +89,7 @@ class HardDeleteExpiredTestCommand extends Command
             $count = $class::onlyTrashed()->where($deletedAtColumn, '<=', Carbon::now()->sub($autoHardDeleteAfter))->forceDelete();
 
             if ($count) {
-                $this->line("Deleted $count rows from " . $object->getTable() . " table.");
+                $this->line("Deleted $count rows from ".$object->getTable().' table.');
             }
         }
 
