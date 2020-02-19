@@ -1,5 +1,6 @@
 # Laravel Auto Hard Deleter
 
+![PHP Composer](https://github.com/SiavashBamshadnia/Laravel-Auto-Hard-Deleter/workflows/PHP%20Composer/badge.svg)
 [![Build Status](https://travis-ci.org/SiavashBamshadnia/Laravel-Auto-Hard-Deleter.svg?branch=master)](https://travis-ci.org/SiavashBamshadnia/Laravel-Auto-Hard-Deleter)
 [![Build Status](https://scrutinizer-ci.com/g/SiavashBamshadnia/Laravel-Auto-Hard-Deleter/badges/build.png?b=master)](https://scrutinizer-ci.com/g/SiavashBamshadnia/Laravel-Auto-Hard-Deleter/build-status/master)
 [![Latest Stable Version](https://poser.pugx.org/sbamtr/Laravel-Auto-Hard-Deleter/version)](https://packagist.org/packages/sbamtr/laravel-auto-hard-deleter)
