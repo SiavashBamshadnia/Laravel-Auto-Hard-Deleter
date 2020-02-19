@@ -89,7 +89,7 @@ class HardDeleteExpiredCommand extends Command
             $count = $class::onlyTrashed()->where($deletedAtColumn, '<=', Carbon::now()->sub($autoHardDeleteAfter))->forceDelete();
 
             if ($count) {
-                $this->line("Deleted $count rows from " . $object->getTable() . ' table.');
+                $this->line("Deleted $count rows from ".$object->getTable().' table.');
             }
         }
 

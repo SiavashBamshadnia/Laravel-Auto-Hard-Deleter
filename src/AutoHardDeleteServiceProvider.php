@@ -36,7 +36,7 @@ class AutoHardDeleteServiceProvider extends ServiceProvider
     public function boot()
     {
         // Publish config file
-        $configPath = __DIR__ . '/../config/auto-hard-deleter.php';
+        $configPath = __DIR__.'/../config/auto-hard-deleter.php';
         if (function_exists('config_path')) {
             $publishPath = config_path('auto-hard-deleter.php');
         } else {
