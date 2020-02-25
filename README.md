@@ -11,7 +11,7 @@
 
 ![](cover.jpg)
 
-This package, deletes soft deleted rows automatically after a time interval that you define. 
+This package deletes soft deleted rows automatically after a time interval that you define. 
 
 *For Laravel and Lumen 5.5+, 6*
 
