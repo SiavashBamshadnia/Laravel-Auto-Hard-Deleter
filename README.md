@@ -9,9 +9,11 @@
 [![Code Intelligence Status](https://scrutinizer-ci.com/g/SiavashBamshadnia/Laravel-Auto-Hard-Deleter/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
 [![License](https://poser.pugx.org/sbamtr/Laravel-Auto-Hard-Deleter/license)](https://github.com/SiavashBamshadnia/Laravel-Auto-Hard-Deleter)
 
+![](cover.jpg)
+
 This package, deletes soft deleted rows automatically after a time interval that you define. 
 
-*For Laravel 5.5+, 6 and Lumen*
+*For Laravel and Lumen 5.5+, 6*
 
 * [Installation](#installation)
 * [Usage](#usage)
@@ -68,7 +70,7 @@ AUTO_HARD_DELETE_AFTER='1 day'
 ``` 
 
 ## Usage
-in your models that used `SoftDeletes` trait, you can enable Auto Hard Delete with this line:
+in your models that used `SoftDeletes` trait, you can enable Auto Hard Delete with this code:
 ```php
 class SampleModel extends Model
 {
@@ -82,7 +84,7 @@ Also you can set expiration time for your deleted entities using the following l
 const AUTO_HARD_DELETE_AFTER = '5 months';
 ```
 In the code above, expiration time for your soft deleted entity model is 5 months.
-More complete code is:
+The final code is:
 ```php
 class SampleModel extends Model
 {
