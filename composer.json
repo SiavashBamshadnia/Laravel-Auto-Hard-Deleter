@@ -8,12 +8,12 @@
   ],
   "type": "library",
   "require": {
-    "illuminate/console": "^5.5|^6",
-    "illuminate/database": "^5.5|^6",
-    "illuminate/support": "^5.5|^6"
+    "illuminate/console": "^5.5|^6|^7",
+    "illuminate/database": "^5.5|^6|^7",
+    "illuminate/support": "^5.5|^6|^7"
   },
   "require-dev": {
-    "orchestra/testbench": "^3|^4"
+    "orchestra/testbench": "^3|^4|^5"
   },
   "description": "Laravel Auto Hard Deleter",
   "license": "MIT",
