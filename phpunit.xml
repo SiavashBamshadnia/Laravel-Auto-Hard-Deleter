@@ -31,6 +31,6 @@
         <server name="SESSION_DRIVER" value="array"/>
     </php>
     <logging>
-        <log type="coverage-clover" target="build/logs/clover.xml"/>
+        <log type="coverage-clover" target="clover.xml"/>
     </logging>
 </phpunit>
