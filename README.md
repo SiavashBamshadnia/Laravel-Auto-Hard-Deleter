@@ -8,7 +8,6 @@
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/SiavashBamshadnia/Laravel-Auto-Hard-Deleter/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/SiavashBamshadnia/Laravel-Auto-Hard-Deleter/?branch=master)
 [![Code Intelligence Status](https://scrutinizer-ci.com/g/SiavashBamshadnia/Laravel-Auto-Hard-Deleter/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
 [![License](https://poser.pugx.org/sbamtr/Laravel-Auto-Hard-Deleter/license)](https://github.com/SiavashBamshadnia/Laravel-Auto-Hard-Deleter)
-[![Coverage Status](https://coveralls.io/repos/github/SiavashBamshadnia/Laravel-Auto-Hard-Deleter/badge.svg?branch=master)](https://coveralls.io/github/SiavashBamshadnia/Laravel-Auto-Hard-Deleter?branch=master)
 ![PHP from Travis config](https://img.shields.io/travis/php-v/SiavashBamshadnia/Laravel-Auto-Hard-Deleter.svg)
 
 ![](cover.jpg)
