@@ -9,6 +9,7 @@
 [![Code Intelligence Status](https://scrutinizer-ci.com/g/SiavashBamshadnia/Laravel-Auto-Hard-Deleter/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
 [![License](https://poser.pugx.org/sbamtr/Laravel-Auto-Hard-Deleter/license)](https://github.com/SiavashBamshadnia/Laravel-Auto-Hard-Deleter)
 ![PHP from Travis config](https://img.shields.io/travis/php-v/SiavashBamshadnia/Laravel-Auto-Hard-Deleter.svg)
+[![CodeFactor](https://www.codefactor.io/repository/github/siavashbamshadnia/laravel-auto-hard-deleter/badge)](https://www.codefactor.io/repository/github/siavashbamshadnia/laravel-auto-hard-deleter)
 
 ![](cover.jpg)
 
