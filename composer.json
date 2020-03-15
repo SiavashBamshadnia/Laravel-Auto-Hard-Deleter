@@ -13,8 +13,7 @@
     "illuminate/support": "^5.5|^6|^7"
   },
   "require-dev": {
-    "orchestra/testbench": "^3|^4|^5",
-    "php-coveralls/php-coveralls": "^2.2"
+    "orchestra/testbench": "^3|^4|^5"
   },
   "description": "Laravel Auto Hard Deleter",
   "license": "MIT",
