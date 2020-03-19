@@ -79,7 +79,7 @@ class HardDeleteExpiredTestCommand extends Command
             }
 
             if (!$autoHardDeleteAfter || blank($autoHardDeleteAfter)) {
-                $autoHardDeleteAfter = /** @scrutinizer ignore-call */ config('auto-hard-deleter.auto_hard_delete_after');
+                $autoHardDeleteAfter = config('auto-hard-deleter.auto_hard_delete_after', '60 days');
             }
             if (is_numeric($autoHardDeleteAfter)) {
                 $autoHardDeleteAfter .= ' days';
