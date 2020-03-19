@@ -35,6 +35,7 @@ class HardDeleteExpiredCommand extends Command
 
     /**
      * Execute the console command.
+     *
      * @throws \ReflectionException
      */
     public function handle()
