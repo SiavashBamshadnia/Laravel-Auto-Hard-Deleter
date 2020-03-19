@@ -2,11 +2,8 @@
 
 ![PHP Composer](https://github.com/SiavashBamshadnia/Laravel-Auto-Hard-Deleter/workflows/PHP%20Composer/badge.svg)
 [![Build Status](https://travis-ci.org/SiavashBamshadnia/Laravel-Auto-Hard-Deleter.svg?branch=master)](https://travis-ci.org/SiavashBamshadnia/Laravel-Auto-Hard-Deleter)
-[![Build Status](https://scrutinizer-ci.com/g/SiavashBamshadnia/Laravel-Auto-Hard-Deleter/badges/build.png?b=master)](https://scrutinizer-ci.com/g/SiavashBamshadnia/Laravel-Auto-Hard-Deleter/build-status/master)
 [![StyleCI](https://github.styleci.io/repos/241140247/shield?branch=master)](https://github.styleci.io/repos/241140247)
 [![Latest Stable Version](https://poser.pugx.org/sbamtr/Laravel-Auto-Hard-Deleter/version)](https://packagist.org/packages/sbamtr/laravel-auto-hard-deleter)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/SiavashBamshadnia/Laravel-Auto-Hard-Deleter/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/SiavashBamshadnia/Laravel-Auto-Hard-Deleter/?branch=master)
-[![Code Intelligence Status](https://scrutinizer-ci.com/g/SiavashBamshadnia/Laravel-Auto-Hard-Deleter/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
 [![License](https://poser.pugx.org/sbamtr/Laravel-Auto-Hard-Deleter/license)](https://github.com/SiavashBamshadnia/Laravel-Auto-Hard-Deleter)
 ![PHP from Travis config](https://img.shields.io/travis/php-v/SiavashBamshadnia/Laravel-Auto-Hard-Deleter.svg)
 [![CodeFactor](https://www.codefactor.io/repository/github/siavashbamshadnia/laravel-auto-hard-deleter/badge)](https://www.codefactor.io/repository/github/siavashbamshadnia/laravel-auto-hard-deleter)
