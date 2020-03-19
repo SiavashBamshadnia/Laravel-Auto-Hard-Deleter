@@ -35,6 +35,7 @@ class HardDeleteExpiredCommand extends Command
 
     /**
      * Execute the console command.
+     * @throws \ReflectionException
      */
     public function handle()
     {
@@ -52,7 +53,7 @@ class HardDeleteExpiredCommand extends Command
         }
 
         // Include all of classes
-        $classes = include_once /** @scrutinizer ignore-call */ base_path('vendor/composer/autoload_classmap.php');
+        $classes = include_once base_path('vendor/composer/autoload_classmap.php');
         $classes = array_keys($classes);
         $classes2 = [];
 
@@ -79,7 +80,7 @@ class HardDeleteExpiredCommand extends Command
             }
 
             if (!$autoHardDeleteAfter || blank($autoHardDeleteAfter)) {
-                $autoHardDeleteAfter = /** @scrutinizer ignore-call */ config('auto-hard-deleter.auto_hard_delete_after');
+                $autoHardDeleteAfter = config('auto-hard-deleter.auto_hard_delete_after', '60 days');
             }
             if (is_numeric($autoHardDeleteAfter)) {
                 $autoHardDeleteAfter .= ' days';

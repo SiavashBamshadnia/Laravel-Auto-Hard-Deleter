@@ -40,7 +40,7 @@ class AutoHardDeleteServiceProvider extends ServiceProvider
         if (function_exists('config_path')) {
             $publishPath = config_path('auto-hard-deleter.php');
         } else {
-            $publishPath = /** @scrutinizer ignore-call */ base_path('config/auto-hard-deleter.php');
+            $publishPath = base_path('config/auto-hard-deleter.php');
         }
         $this->publishes([$configPath => $publishPath], 'config');
     }
