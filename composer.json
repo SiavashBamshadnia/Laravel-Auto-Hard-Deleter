@@ -10,7 +10,7 @@
   "require": {
     "php": ">=7.2.5",
     "illuminate/console": "^6|^7|^8",
-    "illuminate/database": "^6.20.12|^7.30.3|^8.22.1",
+    "illuminate/database": "^6.20.12|^7.30.4|^8.22.1",
     "illuminate/support": "^6|^7|^8"
   },
   "require-dev": {
