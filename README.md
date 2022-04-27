@@ -12,7 +12,7 @@
 
 This package deletes soft deleted rows automatically after a time interval that you define. 
 
-*For Laravel and Lumen 6, 7, 8*
+*For Laravel and Lumen 6, 7, 8, 9*
 
 * [Installation](#installation)
 * [Usage](#usage)
