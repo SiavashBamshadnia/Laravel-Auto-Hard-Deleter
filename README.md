@@ -1,5 +1,41 @@
 # Laravel Auto Hard Deleter
 
+> [!IMPORTANT]  
+> **Archived** – This package is no longer maintained.  
+> Laravel now provides a built-in way to prune and automatically delete old models using
+> the [Prunable and MassPrunable traits](https://laravel.com/docs/eloquent#pruning-models).  
+> Please use Laravel's native pruning feature instead.
+
+### Example with Laravel Prunable
+
+```php
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Prunable;
+
+class SampleModel extends Model
+{
+    use SoftDeletes, Prunable;
+
+    /**
+     * Define which records should be pruned.
+     */
+    public function prunable()
+    {
+        // Delete records soft deleted more than 30 days ago
+        return static::where('deleted_at', '<=', now()->subDays(30));
+    }
+}
+```
+
+Then schedule the pruning command in your `routes/console.php`:
+
+```php
+use Illuminate\Support\Facades\Schedule;
+
+Schedule::command('model:prune')->daily();
+```
+
 ![PHP Composer](https://github.com/SiavashBamshadnia/Laravel-Auto-Hard-Deleter/workflows/PHP%20Composer/badge.svg)
 [![Build Status](https://travis-ci.org/SiavashBamshadnia/Laravel-Auto-Hard-Deleter.svg?branch=master)](https://travis-ci.org/SiavashBamshadnia/Laravel-Auto-Hard-Deleter)
 [![StyleCI](https://github.styleci.io/repos/241140247/shield?branch=master)](https://github.styleci.io/repos/241140247)
